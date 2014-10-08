@@ -1,0 +1,26 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table{
+  text-align: left;
+  font-family: sans-serif;
+
+  tr:nth-child(2n){
+    background-color: #eee;
+  }
+
+  th{
+    text-transform: uppercase;
+  }
+
+  td{
+    padding: 10px;
+    font-family: courier;
+    color: #999;
+
+    a{
+      color: #000;
+    }
+  }
+}

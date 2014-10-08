@@ -1,0 +1,13 @@
+<h1>The Article</h1>
+
+<p><strong>Title:</strong> <%= @article.title %></p>
+<p><strong>Text:</strong> <%= @article.text %></p>
+<p><strong>Author:</strong> <%= @article.author %></p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<p><%= link_to 'edit this article', edit_article_path(@article) %> | <%= link_to 'all the articles', articles_path %></p>

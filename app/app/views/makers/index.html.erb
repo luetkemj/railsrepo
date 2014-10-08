@@ -1,0 +1,21 @@
+<h1>Makers</h1>
+
+
+<% @makers.each do |maker| %>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="http://www.fillmurray.com/900/900" alt="...">
+      <div class="caption">
+        <h3><%= link_to maker.name, maker_path(maker) %></h3>
+        <h4><%= maker.role %></h4>
+        <p><%= maker.bio %></p>
+        <p>
+          <%= link_to 'edit', maker_path(maker), class: "btn btn-primary", role: "button" %>
+          <%= link_to 'delete', maker_path(maker), class: "btn btn-danger", role: "button" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

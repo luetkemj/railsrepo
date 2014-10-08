@@ -1,0 +1,18 @@
+<%= form_for :maker, url: makers_path do |f| %>
+
+<div class="input-group">
+  <%= f.text_field :name, class:"form-control", placeholder:"name" %>
+</div>
+ 
+<div class="input-group"> 
+  <%= f.text_field :role, class:"form-control", placeholder:"role" %>
+</div>
+
+<div class="input-group">
+  <%= f.text_area :bio, class:"form-control", placeholder:"bio" %>
+</div>
+
+
+<%= f.submit class:"btn btn-primary btn-lg" %>
+
+<% end %>
