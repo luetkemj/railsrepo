@@ -13,6 +13,13 @@ class MakersController < ApplicationController
     @maker = Maker.find(params[:id])
   end
 
+  def destroy
+    @maker = Maker.find(params[:id])
+    @maker.destroy
+
+    redirect_to makers_path
+  end
+
   def index
     @makers = Maker.all
   end

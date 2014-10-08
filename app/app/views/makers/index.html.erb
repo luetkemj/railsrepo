@@ -1,5 +1,5 @@
 <h1>Makers</h1>
-
+<%= link_to 'Add New Maker', new_maker_path, class: "btn btn-primary", role: "button"  %>
 
 <% @makers.each do |maker| %>
 <div class="row">
@@ -12,7 +12,7 @@
         <p><%= maker.bio %></p>
         <p>
           <%= link_to 'edit', maker_path(maker), class: "btn btn-primary", role: "button" %>
-          <%= link_to 'delete', maker_path(maker), class: "btn btn-danger", role: "button" %>
+          <%= link_to 'delete', maker_path(maker), method: :delete, data: {confirm:'You sure about that?'}, class: "btn btn-danger", role: "button" %>
         </p>
       </div>
     </div>
