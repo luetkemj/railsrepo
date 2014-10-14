@@ -1,8 +1,9 @@
 <h1>Makers</h1>
 <%= link_to 'Add New Maker', new_maker_path, class: "btn btn-primary", role: "button"  %>
 
-<% count = 1 %>
+<% count = 0 %>
 <div class="row">
+
 <% @makers.each do |maker| %>
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
@@ -14,6 +15,12 @@
       </div>
     </div>
   </div>
+  <% count = count +1 %>
+
+  <% if (count % 3) == 0 %>
+    </div><div class="row">
+  <% end %>
 
 <% end %>
+
 </div>
