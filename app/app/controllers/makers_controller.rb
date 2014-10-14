@@ -13,6 +13,20 @@ class MakersController < ApplicationController
     @maker = Maker.find(params[:id])
   end
 
+  def edit
+    @maker = Maker.find(params[:id])
+  end
+
+  def update
+    @maker = Maker.find(params[:id])
+
+    if @maker.update(maker_params)
+      redirect_to @maker
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @maker = Maker.find(params[:id])
     @maker.destroy
