@@ -11,6 +11,12 @@ class MakersController < ApplicationController
 
   def show
     @maker = Maker.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json{
+        render :json => @maker.to_json
+      }
+    end
   end
 
   def edit
